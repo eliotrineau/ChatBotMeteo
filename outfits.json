@@ -50,6 +50,18 @@
                     "bas": "jean",
                     "chaussures": "baskets"
                 }
+            },
+            "nuageux": {
+                "tenue1": {
+                    "haut": "t-shirt",
+                    "bas": "pantalon",
+                    "chaussures": "baskets"
+                },
+                "tenue2": {
+                    "haut": "pull",
+                    "bas": "short",
+                    "chaussures": "sandales"
+                }
             }
         },
         "automne": {
@@ -155,6 +167,18 @@
                     "haut": "pull",
                     "bas": "jean",
                     "chaussures": "baskets"
+                }
+            },
+            "nuageux": {
+                "tenue1": {
+                    "haut": "t-shirt",
+                    "bas": "pantalon",
+                    "chaussures": "baskets"
+                },
+                "tenue2": {
+                    "haut": "pull",
+                    "bas": "jupe",
+                    "chaussures": "crocs"
                 }
             }
         },
