@@ -60,14 +60,14 @@ def questionnaire():
             return "Choix vestimentaire invalide."
 
     elif gender == "1":  # homme
-        if style == "1":  # été
-            return outfitsData["hommes"]["été"][weather]
-        elif style == "2":  # automne
-            return outfitsData["hommes"]["automne"][weather]
-        elif style == "3":  # hiver
-            return outfitsData["hommes"]["hiver"][weather]
-        elif style == "4":  # printemps
+        if style == "1":  # printemps
             return outfitsData["hommes"]["printemps"][weather]
+        elif style == "2":  # été
+            return outfitsData["hommes"]["été"][weather]
+        elif style == "3":  # automne
+            return outfitsData["hommes"]["automne"][weather]
+        elif style == "4":  # hiver
+            return outfitsData["hommes"]["hiver"][weather]
         else:
             return "Choix vestimentaire invalide."
 
