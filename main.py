@@ -3,17 +3,21 @@
 
 import requests as rq
 import json as json_module
+import os
 
 def sexe():
+    os.system('clear')
     sexe = input("Êtes vous un homme ou une femme ?\n0 : femme\n1 : homme\n")
     return sexe
 
 def styleVestimentaire():
-    styleVestimentaire = input("Veuillez faire votre choix vestimentaire :\n1 : printemps\n2 : été\n3 : automne\n4 : hiver\n")
+    os.system('clear')
+    styleVestimentaire = input("Veuillez faire votre choix de saison:\n1 : printemps\n2 : été\n3 : automne\n4 : hiver\n")
     return styleVestimentaire
 
 def cityInput():
-    cityInput = input("Veuillez rentrer un nom de ville\n")
+    os.system('clear')
+    cityInput = input("Veuillez rentrer un nom de ville:\n")
     return cityInput
 
 
@@ -49,31 +53,35 @@ def questionnaire():
 
     if gender == "0":  # femme
         if style == "1":  # printemps
-            return outfitsData["femmes"]["printemps"][weather]
+            return outfitsData["femmes"]["printemps"][weather]["tenue1"], outfitsData["femmes"]["printemps"][weather]["tenue2"]
         elif style == "2":  # été
-            return outfitsData["femmes"]["été"][weather]
+            return outfitsData["femmes"]["été"][weather]["tenue1"], outfitsData["femmes"]["été"][weather]["tenue2"]
         elif style == "3":  # automne
-            return outfitsData["femmes"]["automne"][weather]
+            return outfitsData["femmes"]["automne"][weather]["tenue1"], outfitsData["femmes"]["automne"][weather]["tenue2"]
         elif style == "4":  # hiver
-            return outfitsData["femmes"]["hiver"][weather]
+            return outfitsData["femmes"]["hiver"][weather]["tenue1"], outfitsData["femmes"]["hiver"][weather]["tenue2"]
         else:
             return "Choix vestimentaire invalide."
 
     elif gender == "1":  # homme
         if style == "1":  # printemps
-            return outfitsData["hommes"]["printemps"][weather]
+            return outfitsData["hommes"]["printemps"][weather]["tenue1"], outfitsData["hommes"]["printemps"][weather]["tenue2"]
         elif style == "2":  # été
-            return outfitsData["hommes"]["été"][weather]
+            return outfitsData["hommes"]["été"][weather]["tenue1"], outfitsData["hommes"]["été"][weather]["tenue2"]
         elif style == "3":  # automne
-            return outfitsData["hommes"]["automne"][weather]
+            return outfitsData["hommes"]["automne"][weather]["tenue1"], outfitsData["hommes"]["automne"][weather]["tenue2"]
         elif style == "4":  # hiver
-            return outfitsData["hommes"]["hiver"][weather]
+            return outfitsData["hommes"]["hiver"][weather]["tenue1"], outfitsData["hommes"]["hiver"][weather]["tenue2"]
         else:
             return "Choix vestimentaire invalide."
 
     else:
         return "Sexe invalide."
 
+ 
+outfit1, outfit2 = questionnaire()
+os.system('clear')
+print("Voici les tenues que vous pouvez porter aujourd'hui :")
+print("\nTenue 1 :\nHaut: ", outfit1["haut"], "\nBas: ", outfit1["bas"], "\nChaussures: ", outfit1["chaussures"])
+print("\nTenue 2 :\nHaut: ", outfit2["haut"], "\nBas: ", outfit2["bas"], "\nChaussures: ", outfit2["chaussures"])
 
-outfit = questionnaire()
-print(outfit)
