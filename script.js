@@ -44,7 +44,7 @@ function getWeather() {
         .then(data => {
             var city = data.results[0].components.city;
 
-            fetch(`http://localhost:5000/questionnaire`, {
+            fetch(`http://0.0.0.0:3000/questionnaire`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
