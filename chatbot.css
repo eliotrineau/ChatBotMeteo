@@ -52,3 +52,21 @@ body {
     background-color: #45a049;
   }
   
+  .form-container {
+    margin-top: 20px;
+  }
+
+  .form-container label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-container input[type="radio"],
+  .form-container select {
+    margin-bottom: 10px;
+  }
+
+  #result {
+    margin-top: 20px;
+    font-weight: bold;
+  }

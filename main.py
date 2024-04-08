@@ -15,10 +15,10 @@ def sexe():
     sexe = input("Êtes vous un homme ou une femme ?\n0 : femme\n1 : homme\n")
     return sexe
 
-def styleVestimentaire():
+def saison():
     os.system('clear')
-    styleVestimentaire = input("Veuillez faire votre choix de saison:\n1 : printemps\n2 : été\n3 : automne\n4 : hiver\n")
-    return styleVestimentaire
+    saison = input("Veuillez faire votre choix de saison:\n1 : printemps\n2 : été\n3 : automne\n4 : hiver\n")
+    return saison
 
 def cityInput():
     os.system('clear')
@@ -31,14 +31,17 @@ apiKey = "b09e3c93acf17d44ab9a805b88b2a074"
 
 @app.route('/questionnaire', methods=['POST'])
 def questionnaire():
-    city = cityInput()
+    data = request.get_json()
+    sexe = data.get('sexe')
+    saison = data.get('saison')
+    cityInput = data.get('cityInput')
     apiLink = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={apiKey}&lang={langue}"
     response = rq.get(apiLink)
     weather_data = response.json()
     weather = weather_data['weather'][0]['description']
 
     gender = sexe()
-    style = styleVestimentaire()
+    style = saison()
 
     with open('outfits.json') as file:
         outfitsData = json_module.load(file)

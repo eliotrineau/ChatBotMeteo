@@ -11,13 +11,33 @@
   </head>
   <body>
     <h1>Chatbot</h1>
+    <div>Selon votre localisation, il semblerait que la météo soit actuellement: <span id="weather"></span></div>
     <div class="chat-container">
       <div class="chat-box" id="chat-box">
         <div class="chat-message bot-message">Bonjour, je suis votre Chatbot Assistant Vestimentaire!</div>
-        <div class="chat-message bot-message">Selon votre localisation, il semblerait que la météo soit actuellement: <span id="weather"></span></div>
+      <div class="chat-message bot-message">Pour quelle ville souhaitez-vous connaître la météo?</div> 
       </div>
       <input type="text" id="user-input" placeholder="Votre message...">
       <button onclick="sendMessage()">Envoyer</button>
     </div>
+    <div class="form-container">
+      <div>
+        <label>Sexe:</label>
+        <input type="radio" id="homme" name="sexe" value="homme">
+        <label for="homme">Homme</label>
+        <input type="radio" id="femme" name="sexe" value="femme">
+        <label for="femme">Femme</label>
+      </div>
+      <div>
+        <label>Saison:</label>
+        <select id="saison">
+          <option value="printemps">Printemps</option>
+          <option value="été">Été</option>
+          <option value="automne">Automne</option>
+          <option value="hiver">Hiver</option>
+        </select>
+      </div>
+    </div>
+    <div id="result"></div></select>
   </body>
 </html>

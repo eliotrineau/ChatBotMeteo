@@ -62,3 +62,22 @@ function getWeather() {
 }
 
 document.addEventListener('DOMContentLoaded', getWeather);
+
+function sendQuestionnaire(sexe, saison, cityInput) {
+    fetch(`https://3000-aent0n.githubpreview.dev/questionnaire`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "sexe": sexe,
+            "saison": saison,
+            "cityInput": cityInput
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('result').innerText = JSON.stringify(data);
+    })
+    .catch(error => console.error('Erreur:', error));
+}
