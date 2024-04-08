@@ -1,24 +1,35 @@
-function sendMessage() {
-    var userInput = document.getElementById("user-input").value;
-    var chatBox = document.getElementById("chat-box");
-    appendMessage('user', userInput);
+let state = 'askingCity';
+let city, sexe, saison;
 
-    // Envoie le message à votre script Python
-    fetch("/questionnaire", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ "message": userInput })
-    })
-    .then(response => response.json())
-    .then(data => {
-        appendMessage('bot', "Tenue 1: " + data.outfit1 + ", Tenue 2: " + data.outfit2);
-    })
-    .catch(error => console.error('Erreur lors de l\'envoi de la requête:', error));
-    document.getElementById("user-input").value = "";
+function sendMessage() {
+    const userInput = document.getElementById('user-input').value;
+    document.getElementById('user-input').value = '';
+
+    if (state === 'askingCity') {
+        city = userInput;
+        addMessageToChatBox(`Vous avez choisi la ville : ${city}`);
+        addMessageToChatBox('Quel est votre sexe ? (homme/femme)');
+        state = 'askingSexe';
+    } else if (state === 'askingSexe') {
+        sexe = userInput;
+        addMessageToChatBox(`Vous avez choisi : ${sexe}`);
+        addMessageToChatBox('Quelle est la saison ? (printemps/été/automne/hiver)');
+        state = 'askingSaison';
+    } else if (state === 'askingSaison') {
+        saison = userInput;
+        addMessageToChatBox(`Vous avez choisi : ${saison}`);
+        state = 'done';
+
+        sendQuestionnaire(city, sexe, saison);
+    }
 }
 
+function addMessageToChatBox(message) {
+    const chatBox = document.getElementById('chat-box');
+    const messageElement = document.createElement('div');
+    messageElement.textContent = message;
+    chatBox.appendChild(messageElement);
+}
 function appendMessage(sender, message) {
   var chatBox = document.getElementById("chat-box");
   var messageElement = document.createElement("div");

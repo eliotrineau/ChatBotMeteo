@@ -1,43 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interface du Chatbot</title>
-    <link rel="stylesheet" href="chatbot.css">
-    <link rel="icon" type="image/png" href="">
-    <script src="script.js" defer></script>
-  </head>
-  </head>
-  <body>
-    <h1>Chatbot</h1>
-    <div>Selon votre localisation, il semblerait que la météo soit actuellement: <span id="weather"></span></div>
-    <div class="chat-container">
-      <div class="chat-box" id="chat-box">
-        <div class="chat-message bot-message">Bonjour, je suis votre Chatbot Assistant Vestimentaire!</div>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interface du Chatbot</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <h1 class="text-3xl mb-4">Chatbot</h1>
+  <div class="mb-4">Selon votre localisation, il semblerait que la météo soit actuellement: <span id="weather" class="font-bold"></span></div>
+  <div class="chat-container bg-white p-4 rounded shadow">
+    <div class="chat-box overflow-auto h-64 mb-4 p-4 bg-gray-200 rounded" id="chat-box">
+      <div class="chat-message bot-message">Bonjour, je suis votre Chatbot Assistant Vestimentaire!</div>
       <div class="chat-message bot-message">Pour quelle ville souhaitez-vous connaître la météo?</div> 
-      </div>
-      <input type="text" id="user-input" placeholder="Votre message...">
-      <button onclick="sendMessage()">Envoyer</button>
     </div>
-    <div class="form-container">
-      <div>
-        <label>Sexe:</label>
-        <input type="radio" id="homme" name="sexe" value="homme">
-        <label for="homme">Homme</label>
-        <input type="radio" id="femme" name="sexe" value="femme">
-        <label for="femme">Femme</label>
-      </div>
-      <div>
-        <label>Saison:</label>
-        <select id="saison">
-          <option value="printemps">Printemps</option>
-          <option value="été">Été</option>
-          <option value="automne">Automne</option>
-          <option value="hiver">Hiver</option>
-        </select>
-      </div>
-    </div>
-    <div id="result"></div></select>
-  </body>
+    <input type="text" id="user-input" placeholder="Votre message..." class="border p-2 rounded w-full mb-2">
+    <button onclick="sendMessage()" class="bg-blue-500 text-white p-2 rounded">Envoyer</button>
+  </div>
+</body>
 </html>
