@@ -23,9 +23,9 @@ This chatbot helps users choose their outfits based on real-time weather conditi
 - HTML/CSS for the chatbot interface
 
 ## Contributors
-- Anton ADAM (@aent0n)
-- Eliot RINEAU (@eliotrineau)
-- Belaïd IOUDJAOUDENE (@belaid226)
+- Anton ADAM ([@aent0n](https://github.com/aent0n))
+- Eliot RINEAU ([@eliotrineau](https://github.com/eliotrineau))
+- Belaïd IOUDJAOUDENE ([@belaid226](https://github.com/belaid226))
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
