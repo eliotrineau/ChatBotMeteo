@@ -4,6 +4,8 @@
 import requests as rq
 import json as json_module
 import os
+from flask import Flask, request, jsonify
+app = Flask(__name__)
 
 def sexe():
     os.system('clear')
@@ -24,11 +26,9 @@ def cityInput():
 langue = "fr"
 apiKey = "b09e3c93acf17d44ab9a805b88b2a074"
 
-
+@app.route('/questionnaire', methods=['POST'])
 def questionnaire():
-    # Set the different data
     city = cityInput()
-    # Get the weather based on the location
     apiLink = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={apiKey}&lang={langue}"
     response = rq.get(apiLink)
     weather_data = response.json()
@@ -39,7 +39,6 @@ def questionnaire():
 
     with open('outfits.json') as file:
         outfitsData = json_module.load(file)
-    file.close()
 
     # Determine the outfit based on the weather
     if "rain" in weather:
@@ -48,30 +47,30 @@ def questionnaire():
         weather = "nuageux"
     elif "snow" in weather:
         weather = "neige"
-    elif "clear" in weather:
+    elif "clear" in weather or "ciel dégagé" in weather:
         weather = "ensoleillé"
 
     if gender == "0":  # femme
         if style == "1":  # printemps
-            return outfitsData["femmes"]["printemps"][weather]["tenue1"], outfitsData["femmes"]["printemps"][weather]["tenue2"]
+            return jsonify({"outfit1": outfitsData["femme"]["printemps"][weather], "outfit2": outfitsData["femme"]["printemps"][weather]})
         elif style == "2":  # été
-            return outfitsData["femmes"]["été"][weather]["tenue1"], outfitsData["femmes"]["été"][weather]["tenue2"]
+            return jsonify({"outfit1": outfitsData["femme"]["été"][weather], "outfit2": outfitsData["femme"]["été"][weather]})
         elif style == "3":  # automne
-            return outfitsData["femmes"]["automne"][weather]["tenue1"], outfitsData["femmes"]["automne"][weather]["tenue2"]
+            return jsonify({"outfit1": outfitsData["femme"]["automne"][weather], "outfit2": outfitsData["femme"]["automne"][weather]})
         elif style == "4":  # hiver
-            return outfitsData["femmes"]["hiver"][weather]["tenue1"], outfitsData["femmes"]["hiver"][weather]["tenue2"]
+            return jsonify({"outfit1": outfitsData["femme"]["hiver"][weather], "outfit2": outfitsData["femme"]["hiver"][weather]})
         else:
             return "Choix vestimentaire invalide."
 
     elif gender == "1":  # homme
         if style == "1":  # printemps
-            return outfitsData["hommes"]["printemps"][weather]["tenue1"], outfitsData["hommes"]["printemps"][weather]["tenue2"]
+            return jsonify({"outfit1": outfitsData["hommes"]["printemps"][weather], "outfit2": outfitsData["hommes"]["printemps"][weather]})
         elif style == "2":  # été
-            return outfitsData["hommes"]["été"][weather]["tenue1"], outfitsData["hommes"]["été"][weather]["tenue2"]
+            return jsonify({"outfit1": outfitsData["hommes"]["été"][weather], "outfit2": outfitsData["hommes"]["été"][weather]})
         elif style == "3":  # automne
-            return outfitsData["hommes"]["automne"][weather]["tenue1"], outfitsData["hommes"]["automne"][weather]["tenue2"]
+            return jsonify({"outfit1": outfitsData["hommes"]["automne"][weather], "outfit2": outfitsData["hommes"]["automne"][weather]})
         elif style == "4":  # hiver
-            return outfitsData["hommes"]["hiver"][weather]["tenue1"], outfitsData["hommes"]["hiver"][weather]["tenue2"]
+            return jsonify({"outfit1": outfitsData["hommes"]["hiver"][weather], "outfit2": outfitsData["hommes"]["hiver"][weather]})
         else:
             return "Choix vestimentaire invalide."
 
@@ -79,9 +78,5 @@ def questionnaire():
         return "Sexe invalide."
 
  
-outfit1, outfit2 = questionnaire()
-os.system('clear')
-print("Voici les tenues que vous pouvez porter aujourd'hui :")
-print("\nTenue 1 :\nHaut: ", outfit1["haut"], "\nBas: ", outfit1["bas"], "\nChaussures: ", outfit1["chaussures"])
-print("\nTenue 2 :\nHaut: ", outfit2["haut"], "\nBas: ", outfit2["bas"], "\nChaussures: ", outfit2["chaussures"])
-
+if __name__ == '__main__':
+    app.run(debug=True)
