@@ -1,0 +1,214 @@
+{
+    "hommes": {
+        "printemps": {
+            "ensoleillé": {
+                "tenue1": {
+                    "haut": "chemise",
+                    "bas": "pantalon",
+                    "chaussures": "baskets"
+                },
+                "tenue2": {
+                    "haut": "t-shirt",
+                    "bas": "short",
+                    "chaussures": "sandales"
+                }
+            },
+            "pluvieux": {
+                "tenue1": {
+                    "haut": "imperméable",
+                    "bas": "pantalon",
+                    "chaussures": "bottes"
+                },
+                "tenue2": {
+                    "haut": "pull",
+                    "bas": "jean",
+                    "chaussures": "baskets"
+                }
+            }
+        },
+        "été": {
+            "ensoleillé": {
+                "tenue1": {
+                    "haut": "t-shirt",
+                    "bas": "short",
+                    "chaussures": "sandales"
+                },
+                "tenue2": {
+                    "haut": "chemise",
+                    "bas": "bermuda",
+                    "chaussures": "espadrilles"
+                }
+            },
+            "pluvieux": {
+                "tenue1": {
+                    "haut": "t-shirt",
+                    "bas": "pantalon",
+                    "chaussures": "baskets"
+                },
+                "tenue2": {
+                    "haut": "pull",
+                    "bas": "jean",
+                    "chaussures": "baskets"
+                }
+            }
+        },
+        "automne": {
+            "ensoleillé": {
+                "tenue1": {
+                    "haut": "pull",
+                    "bas": "jean",
+                    "chaussures": "baskets"
+                },
+                "tenue2": {
+                    "haut": "chemise",
+                    "bas": "pantalon",
+                    "chaussures": "bottes"
+                }
+            },
+            "pluvieux": {
+                "tenue1": {
+                    "haut": "imperméable",
+                    "bas": "pantalon",
+                    "chaussures": "bottes"
+                },
+                "tenue2": {
+                    "haut": "pull",
+                    "bas": "jean",
+                    "chaussures": "baskets"
+                }
+            }
+        },
+        "hiver": {
+            "ensoleillé": {
+                "tenue1": {
+                    "haut": "pull",
+                    "bas": "pantalon",
+                    "chaussures": "bottes"
+                },
+                "tenue2": {
+                    "haut": "manteau",
+                    "bas": "jean",
+                    "chaussures": "bottes"
+                }
+            },
+            "pluvieux": {
+                "tenue1": {
+                    "haut": "imperméable",
+                    "bas": "pantalon",
+                    "chaussures": "bottes"
+                },
+                "tenue2": {
+                    "haut": "pull",
+                    "bas": "jean",
+                    "chaussures": "baskets"
+                }
+            }
+        }
+    },
+    "femmes": {
+        "printemps": {
+            "ensoleillé": {
+                "tenue1": {
+                    "haut": "chemisier",
+                    "bas": "jupe",
+                    "chaussures": "sandales"
+                },
+                "tenue2": {
+                    "haut": "t-shirt",
+                    "bas": "short",
+                    "chaussures": "sandales"
+                }
+            },
+            "pluvieux": {
+                "tenue1": {
+                    "haut": "imperméable",
+                    "bas": "pantalon",
+                    "chaussures": "bottes"
+                },
+                "tenue2": {
+                    "haut": "pull",
+                    "bas": "jean",
+                    "chaussures": "baskets"
+                }
+            }
+        },
+        "été": {
+            "ensoleillé": {
+                "tenue1": {
+                    "haut": "t-shirt",
+                    "bas": "short",
+                    "chaussures": "sandales"
+                },
+                "tenue2": {
+                    "haut": "robe",
+                    "bas": "sandales",
+                    "chaussures": "sandales"
+                }
+            },
+            "pluvieux": {
+                "tenue1": {
+                    "haut": "t-shirt",
+                    "bas": "pantalon",
+                    "chaussures": "baskets"
+                },
+                "tenue2": {
+                    "haut": "pull",
+                    "bas": "jean",
+                    "chaussures": "baskets"
+                }
+            }
+        },
+        "automne": {
+            "ensoleillé": {
+                "tenue1": {
+                    "haut": "pull",
+                    "bas": "jupe",
+                    "chaussures": "bottes"
+                },
+                "tenue2": {
+                    "haut": "chemisier",
+                    "bas": "pantalon",
+                    "chaussures": "bottes"
+                }
+            },
+            "pluvieux": {
+                "tenue1": {
+                    "haut": "imperméable",
+                    "bas": "pantalon",
+                    "chaussures": "bottes"
+                },
+                "tenue2": {
+                    "haut": "pull",
+                    "bas": "jean",
+                    "chaussures": "baskets"
+                }
+            }
+        },
+        "hiver": {
+            "ensoleillé": {
+                "tenue1": {
+                    "haut": "pull",
+                    "bas": "pantalon",
+                    "chaussures": "bottes"
+                },
+                "tenue2": {
+                    "haut": "manteau",
+                    "bas": "jupe",
+                    "chaussures": "bottes"
+                }
+            },
+            "pluvieux": {
+                "tenue1": {
+                    "haut": "imperméable",
+                    "bas": "pantalon",
+                    "chaussures": "bottes"
+                },
+                "tenue2": {
+                    "haut": "pull",
+                    "bas": "jean",
+                    "chaussures": "baskets"
+                }
+            }
+        }
+    }
+}
