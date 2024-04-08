@@ -4,16 +4,6 @@
 import requests as rq
 import json
 
-
-"""
-sexe = input("Êtes vous un homme ou une femme ?\n0 : femme\n1 : homme")
-styleVestimentaire = input("Veuillez faire votre choix vestimentaire :\n1 : été\n2 : automne\n3 : hiver\n 4 : printemps")
-cityInput = input("Veuillez rentrer un nom de ville")
-"""
-langue = "fr"
-apiKey = "b09e3c93acf17d44ab9a805b88b2a074"
-apiLink = f"https://api.openweathermap.org/data/2.5/weather?q={cityInput}&appid={apiKey}&lang={langue}"
-
 def sexe():
     sexe = input("Êtes vous un homme ou une femme ?\n0 : femme\n1 : homme")
     return sexe
@@ -25,6 +15,12 @@ def styleVestimentaire():
 def cityInput():
     cityInput = input("Veuillez rentrer un nom de ville")
     return cityInput
+
+
+langue = "fr"
+apiKey = "b09e3c93acf17d44ab9a805b88b2a074"
+apiLink = f"https://api.openweathermap.org/data/2.5/weather?q={cityInput}&appid={apiKey}&lang={langue}"
+
 
 def questionnaire():
     sexe()
@@ -67,11 +63,6 @@ def get_outfit(sexe, styleVestimentaire):
     else:
         return "Sexe invalide."
 
-# Example usage:
-sexe = input("Êtes vous un homme ou une femme ?\n0 : femme\n1 : homme\n")
-styleVestimentaire = input("Veuillez faire votre choix vestimentaire :\n1 : été\n2 : automne\n3 : hiver\n 4 : printemps\n")
+
 outfit = get_outfit(sexe, styleVestimentaire)
 print(outfit)
-
-print(JSON)
-
