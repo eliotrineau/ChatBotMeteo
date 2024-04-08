@@ -2,7 +2,7 @@
 
 
 import requests as rq
-import json
+import json as json_module
 
 def sexe():
     sexe = input("Êtes vous un homme ou une femme ?\n0 : femme\n1 : homme")
@@ -19,44 +19,55 @@ def cityInput():
 
 langue = "fr"
 apiKey = "b09e3c93acf17d44ab9a805b88b2a074"
-apiLink = f"https://api.openweathermap.org/data/2.5/weather?q={cityInput}&appid={apiKey}&lang={langue}"
 
 
 def questionnaire():
-    sexe()
-    styleVestimentaire()
-    cityInput()
-    json = rq.get(apiLink).json()
-    JSON = json['weather'][0]['description']
-    return JSON
+    # Set the different data
+    city = cityInput()
+    # Get the weather based on the location
+    apiLink = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={apiKey}&lang={langue}"
+    response = rq.get(apiLink)
+    weather_data = response.json()
+    weather = weather_data['weather'][0]['description']
 
+    gender = sexe()
+    style = styleVestimentaire()
 
-def get_outfit(sexe, styleVestimentaire):
-    file = open('outfits.json')
-    outfitsData = json.load(file)
+    with open('outfits.json') as file:
+        outfitsData = json_module.load(file)
     file.close()
 
-    if sexe == "1":  # femme
-        if styleVestimentaire == "1":  # printemps
-            return outfitsData["femme"]["printemps"]
-        elif styleVestimentaire == "2":  # été
-            return outfitsData["femme"]["été"]
-        elif styleVestimentaire == "3":  # automne
-            return outfitsData["femme"]["automne"]
-        elif styleVestimentaire == "4":  # hiver
-            return outfitsData["femme"]["hiver"]
+    # Determine the outfit based on the weather
+    if "rain" in weather:
+        weather = "pluvieux"
+    elif "cloud" in weather:
+        weather = "nuageux"
+    elif "snow" in weather:
+        weather = "neige"
+    elif "clear" in weather:
+        weather = "ensoleillé"
+
+    if gender == "1":  # femme
+        if style == "1":  # printemps
+            return outfitsData["femme"]["printemps"][weather]
+        elif style == "2":  # été
+            return outfitsData["femme"]["été"][weather]
+        elif style == "3":  # automne
+            return outfitsData["femme"]["automne"][weather]
+        elif style == "4":  # hiver
+            return outfitsData["femme"]["hiver"][weather]
         else:
             return "Choix vestimentaire invalide."
 
-    elif sexe == "0":  # homme
-        if styleVestimentaire == "1":  # été
-            return outfitsData["homme"]["été"]
-        elif styleVestimentaire == "2":  # automne
-            return outfitsData["homme"]["automne"]
-        elif styleVestimentaire == "3":  # hiver
-            return outfitsData["homme"]["hiver"]
-        elif styleVestimentaire == "4":  # printemps
-            return outfitsData["homme"]["printemps"]
+    elif gender == "0":  # homme
+        if style == "1":  # été
+            return outfitsData["homme"]["été"][weather]
+        elif style == "2":  # automne
+            return outfitsData["homme"]["automne"][weather]
+        elif style == "3":  # hiver
+            return outfitsData["homme"]["hiver"][weather]
+        elif style == "4":  # printemps
+            return outfitsData["homme"]["printemps"][weather]
         else:
             return "Choix vestimentaire invalide."
 
@@ -64,5 +75,5 @@ def get_outfit(sexe, styleVestimentaire):
         return "Sexe invalide."
 
 
-outfit = get_outfit(sexe, styleVestimentaire)
+outfit = questionnaire()
 print(outfit)
