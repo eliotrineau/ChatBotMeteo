@@ -1,38 +1,62 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chatbot Interface</title>
-  <link rel="stylesheet" href="chatbot.css">
-  <link rel="icon" type="image/png" href=""> 
+  <title>Interface du Chatbot</title>
+  <link rel="stylesheet" href="chatbot .css"> <!-- Assurez-vous que le lien vers votre fichier CSS est correct -->
+  <link rel="icon" type="image/png" href=""> <!-- Lien vers votre favicon -->
 </head>
 <body>
-  <h1>Chatbot </h1>
+  <h1>Chatbot</h1>
   <div class="chat-container">
-  <div class="chat-box" id="chat-box">
-    <div class="chat-message bot-message">Bonjour</div>
+    <div class="chat-box" id="chat-box">
+      <div class="chat-message bot-message">Bonjour</div>
     </div>
-  <input type="text" id="user-input" placeholder="votre message...">
-    <button onclick="sendMessage()">Send</button>
+    <input type="text" id="user-input" placeholder="Votre message...">
+    <button onclick="sendMessage()">Envoyer</button>
   </div>
-</body>
-</html>
-
 
   <script>
     function sendMessage() {
       var userInput = document.getElementById("user-input").value;
       var chatBox = document.getElementById("chat-box");
-      var userMessage = document.createElement("div");
-      userMessage.className = "chat-message user-message";
-      userMessage.innerText = userInput;
-      chatBox.appendChild(userMessage);
-      var botResponse = document.createElement("div");
-      botResponse.className = "chat-message bot-message";
-      botResponse.innerText = "dsl";
-      chatBox.appendChild(botResponse);
+
+      // Affiche le message de l'utilisateur dans la boîte de chat
+      appendMessage('user', userInput);
+
+      // Envoie le message à votre script Python
+      fetch("main.py", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ "message": userInput })
+      })
+      .then(response => response.text())
+      .then(botResponse => {
+        // Affiche la réponse du bot dans la boîte de chat
+        appendMessage('bot', botResponse);
+      })
+      .catch(error => console.error('Erreur lors de l\'envoi de la requête:', error));
+
+      // Efface le champ de saisie après l'envoi du message
       document.getElementById("user-input").value = "";
+    }
+
+    function appendMessage(sender, message) {
+      var chatBox = document.getElementById("chat-box");
+      var messageElement = document.createElement("div");
+      messageElement.classList.add("chat-message");
+
+      if (sender === 'user') {
+        messageElement.classList.add("user-message");
+      } else if (sender === 'bot') {
+        messageElement.classList.add("bot-message");
+      }
+
+      messageElement.innerText = message;
+      chatBox.appendChild(messageElement);
     }
   </script>
 </body>

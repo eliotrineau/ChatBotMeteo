@@ -5,15 +5,15 @@ import requests as rq
 import json as json_module
 
 def sexe():
-    sexe = input("Êtes vous un homme ou une femme ?\n0 : femme\n1 : homme")
+    sexe = input("Êtes vous un homme ou une femme ?\n0 : femme\n1 : homme\n")
     return sexe
 
 def styleVestimentaire():
-    styleVestimentaire = input("Veuillez faire votre choix vestimentaire :\n1 : été\n2 : automne\n3 : hiver\n 4 : printemps")
+    styleVestimentaire = input("Veuillez faire votre choix vestimentaire :\n1 : printemps\n2 : été\n3 : automne\n4 : hiver\n")
     return styleVestimentaire
 
 def cityInput():
-    cityInput = input("Veuillez rentrer un nom de ville")
+    cityInput = input("Veuillez rentrer un nom de ville\n")
     return cityInput
 
 
@@ -47,27 +47,27 @@ def questionnaire():
     elif "clear" in weather:
         weather = "ensoleillé"
 
-    if gender == "1":  # femme
+    if gender == "0":  # femme
         if style == "1":  # printemps
-            return outfitsData["femme"]["printemps"][weather]
+            return outfitsData["femmes"]["printemps"][weather]
         elif style == "2":  # été
-            return outfitsData["femme"]["été"][weather]
+            return outfitsData["femmes"]["été"][weather]
         elif style == "3":  # automne
-            return outfitsData["femme"]["automne"][weather]
+            return outfitsData["femmes"]["automne"][weather]
         elif style == "4":  # hiver
-            return outfitsData["femme"]["hiver"][weather]
+            return outfitsData["femmes"]["hiver"][weather]
         else:
             return "Choix vestimentaire invalide."
 
-    elif gender == "0":  # homme
+    elif gender == "1":  # homme
         if style == "1":  # été
-            return outfitsData["homme"]["été"][weather]
+            return outfitsData["hommes"]["été"][weather]
         elif style == "2":  # automne
-            return outfitsData["homme"]["automne"][weather]
+            return outfitsData["hommes"]["automne"][weather]
         elif style == "3":  # hiver
-            return outfitsData["homme"]["hiver"][weather]
+            return outfitsData["hommes"]["hiver"][weather]
         elif style == "4":  # printemps
-            return outfitsData["homme"]["printemps"][weather]
+            return outfitsData["hommes"]["printemps"][weather]
         else:
             return "Choix vestimentaire invalide."
 
