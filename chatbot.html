@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot Interface</title>
+  <link rel="stylesheet" href="chatbot .css">
+  <link rel="icon" type="image/png" href=""> 
+</head>
+<body>
+  <h1>Chatbot </h1>
+  <div class="chat-container">
+  <div class="chat-box" id="chat-box">
+    <div class="chat-message bot-message">Bonjour</div>
+    </div>
+  <input type="text" id="user-input" placeholder="votre message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</body>
+</html>
+
+
+  <script>
+    function sendMessage() {
+      var userInput = document.getElementById("user-input").value;
+      var chatBox = document.getElementById("chat-box");
+      var userMessage = document.createElement("div");
+      userMessage.className = "chat-message user-message";
+      userMessage.innerText = userInput;
+      chatBox.appendChild(userMessage);
+      var botResponse = document.createElement("div");
+      botResponse.className = "chat-message bot-message";
+      botResponse.innerText = "dsl";
+      chatBox.appendChild(botResponse);
+      document.getElementById("user-input").value = "";
+    }
+  </script>
+</body>
+</html>
