@@ -1,72 +1,81 @@
-body {
-    background-color: #ffffff;
-  }
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  .chat-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px; /* Rounded borders */
-  }
-  .chat-box {
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    max-height: 300px;
-    padding: 10px;
-  
-  }
-  .chat-message {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .bot-message {
-    background-color: #f2f2f2;
-  }
-  .user-message {
-    background-color: #d3f1f0;
-  }
-  input[type="text"] {
-    width: 70%;
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 50px;
-  }
-  button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #45a049;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.reveal-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  margin: 20px 0;
+  cursor: pointer;
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) infinite;
+}
+
+.mystery-outfit {
+  opacity: 0;
+  display: none;
+}
+
+.mystery-outfit.visible {
+  display: block;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes shake {
+  10%, 90% {
+      transform: translate3d(-1px, 0, 0);
   }
   
-  .form-container {
-    margin-top: 20px;
+  20%, 80% {
+      transform: translate3d(2px, 0, 0);
   }
 
-  .form-container label {
-    display: block;
-    margin-bottom: 5px;
+  30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
   }
 
-  .form-container input[type="radio"],
-  .form-container select {
-    margin-bottom: 10px;
+  40%, 60% {
+      transform: translate3d(4px, 0, 0);
   }
+}
 
-  #result {
-    margin-top: 20px;
-    font-weight: bold;
-  }
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
