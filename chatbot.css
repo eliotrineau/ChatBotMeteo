@@ -5,6 +5,11 @@ body {
   background-size: cover;
 }
 
+#myModal img {
+  width: 35%; 
+  height: auto; 
+}
+
 .input-container {
   position: relative;
 }

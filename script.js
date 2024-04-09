@@ -160,36 +160,36 @@ function sendQuestionnaire(city, sexe, saison) {
                 haut: 'Rien - À POIL !',
                 bas: 'Rien - À POIL !',
                 chaussures: 'Rien - À POIL !',
-                imageURL: 'https://placehold.co/600x400'
+                imageURL: 'https://i.ibb.co/ydWVzjt/Group-466apoil.png'
             },
             {
                 haut: 'Perruque de clown',
                 bas: 'Salopette',
                 chaussures: 'Parpaings sur-mesure',
-                imageURL: 'https://placehold.co/600x400'
+                imageURL: 'https://i.ibb.co/XCz3wP7/image-269clown.png'
             },
             {
                 haut: 'Casque de moto',
                 bas: 'Short de bain',
                 chaussures: 'Tongs',
-                imageURL: 'https://placehold.co/600x400'
+                imageURL: '"https://i.ibb.co/s3r4bWF/image-268moto.png'
             },
             {
                 haut: 'Chemise hawaïenne',
                 bas: 'Pantalon de jogging',
                 chaussures: 'Crocs',
-                imageURL: 'https://placehold.co/600x400'
+                imageURL: 'https://i.ibb.co/r765WtD/image-270hawai.png'
             },
         ];
 
         // Generate a random number between 0 and 100
         let randNum = Math.floor(Math.random() * 100);
-
+        let selectedOutfit = null;
         // If the random number is less than or equal to 15 (15% chance), add the mystery outfit to the html
-        if (randNum <= 20) {
+        if (randNum <= 100) {
             // Select a random mystery outfit
             const randomIndex = Math.floor(Math.random() * mysteryOutfits.length);
-            const selectedOutfit = mysteryOutfits[randomIndex];
+            selectedOutfit = mysteryOutfits[randomIndex];
 
             html += `<div id="tenueM" class="p-6 max-w-sm bg-white rounded-xl shadow-md space-y-4 hover:bg-gray-100 transition-colors duration-200 ease-in-out" data-image-url="${selectedOutfit.imageURL}">`;
             html += `<div class="text-xl font-medium text-black">Mystery Outfit Challenge !!</div>`;
@@ -225,7 +225,6 @@ function sendQuestionnaire(city, sexe, saison) {
             });
         }
         
-
         // Get the modal
         var modal = document.getElementById("myModal");
 
@@ -234,6 +233,9 @@ function sendQuestionnaire(city, sexe, saison) {
 
         // Get all the divs of tenue
         var tenueDivs = document.getElementsByClassName('tenue');
+
+        // Get the img element in the modal
+        var img = modal.getElementsByTagName('img')[0];
 
         // Add event listener to all divs of tenue
         for (let i = 0; i < tenueDivs.length; i++) {
@@ -245,14 +247,14 @@ function sendQuestionnaire(city, sexe, saison) {
 
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() { 
-        modal.style.display = "none";
+            modal.style.display = "none";
         }
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
         }
     })
     .catch(error => console.error('Error:', error));
@@ -280,9 +282,9 @@ var typed2 = new Typed('#message2', options2);
 
 var cities = [
     "Paris", "Marseille", "Lyon", "Toulouse", "Nice", "Nantes", "Strasbourg", 
-    "Montpellier", "Bordeaux", "Lille", "Rennes", "Reims", "Cergy-Pontoise", 
+    "Montpellier", "Bordeaux", "Lille", "Rennes", "Reims",
     "Saint-Étienne", "Toulon", "Angers", "Grenoble", "Dijon", "Nîmes", "Aix-en-Provence", 
-    "Saint-Quentin-en-Yvelines", "Brest", "Le Mans", "Amiens", "Tours", "Limoges", 
+    "Brest", "Le Mans", "Amiens", "Tours", "Limoges", 
     "Clermont-Ferrand", "Villeurbanne", "La Rochelle", "Caen", "Calais", "La Seyne-sur-Mer", 
     "Saint-Paul", "Rouen", "Cannes", "Pau", "Nanterre", "Versailles", "Courbevoie", 
     "Vitry-sur-Seine", "Colombes", "Aulnay-sous-Bois", "Rueil-Malmaison", "La Rochelle", 
@@ -294,9 +296,9 @@ var cities = [
     "La Réunion", "Saint-Denis", "La Possession", "Sainte-Marie", "Le Tampon", "Saint-André", 
     "Saint-Louis", "Saint-Joseph", "Saint-Pierre", "Saint-Benoît", "Saint-Paul", "Saint-Leu", 
     "Sainte-Suzanne", "Petite-Île", "Entre-Deux", "Les Avirons", "Trois-Bassins", "Cilaos", 
-    "Salazie", "Saint-Philippe", "Bras-Panon", "Sainte-Rose", "Le Port", "Saint-Joseph", 
+    "Salazie", "Saint-Philippe", "Bras-Panon", "Sainte-Rose", "Le Port", 
     "Sainte-Marie", "Saint-Louis", "Saint-Paul", "Saint-Pierre", "Saint-Leu", "Saint-André", 
-    "Saint-Benoît", "Saint-Denis", "Sainte-Suzanne", "Saint-Philippe", "Sainte-Rose", 
+    "Saint-Benoît", "Saint-Denis", "Sainte-Suzanne", "Sainte-Rose", 
     "Petite-Île", "Plaine-des-Palmistes", "Port", "Possession", "Tampon", "Trois-Bassins"
 ];
 

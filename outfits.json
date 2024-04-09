@@ -6,13 +6,13 @@
                     "Haut": "Chemise",
                     "Bas": "Pantalon",
                     "Chaussures": "Baskets",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/5MkwzW8/image-26601.png"
                 },
                 "Tenue optimale  #2": {
                     "Haut": "T-shirt",
                     "Bas": "Short",
                     "Chaussures": "Sandales",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/Q8WKG7w/image-26502.png"
                 }
             },
             "pluvieux": {
@@ -20,27 +20,27 @@
                     "Haut": "Impermeable",
                     "Bas": "Pantalon",
                     "Chaussures": "Bottes",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/wp9JRQm/image-26403.png"
                 },
                 "Tenue optimale  #2": {
                     "Haut": "Pull",
                     "Bas": "Jean",
                     "Chaussures": "Baskets",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/0MDj4gR/image-24304.png"
                 }
             },
             "nuageux": {
                 "Tenue optimale  #1": {
-                    "Haut": "blouson en cuir",
-                    "Bas": "pantacourt",
+                    "Haut": "Blouson en cuir",
+                    "Bas": "Pantacourt",
                     "Chaussures": "Bottes en cuir",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/60xVHSP/image-24405.png"
                 },
                 "Tenue optimale  #2": {
                     "Haut": "Pull",
                     "Bas": "Short",
                     "Chaussures": "Sandales",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/Jx91h8f/image-24506.png"
                 }
             }
         },
@@ -50,13 +50,13 @@
                     "Haut": "T-shirt",
                     "Bas": "Short",
                     "Chaussures": "Sandales",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/L0XcrNP/image-24607.png"
                 },
                 "Tenue optimale  #2": {
                     "Haut": "Chemise",
-                    "Bas": "bermuda",
-                    "Chaussures": "espadrilles",
-                    "imageURL": ""
+                    "Bas": "Bermuda",
+                    "Chaussures": "Espadrilles",
+                    "imageURL": "https://i.ibb.co/rsWXRWc/image-24708.png"
                 }
             },
             "pluvieux": {
@@ -64,13 +64,13 @@
                     "Haut": "T-shirt",
                     "Bas": "Pantalon",
                     "Chaussures": "Baskets",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/2cXY07L/image-24809.png"
                 },
                 "Tenue optimale  #2": {
                     "Haut": "Pull",
                     "Bas": "Jean",
                     "Chaussures": "Baskets",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/12bTNGZ/image-24910.png"
                 }
             },
             "nuageux": {
@@ -78,13 +78,13 @@
                     "Haut": "T-shirt",
                     "Bas": "Pantalon",
                     "Chaussures": "Baskets",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/Y3gGBkZ/image-25011.png"
                 },
                 "Tenue optimale  #2": {
                     "Haut": "Pull",
                     "Bas": "Short",
                     "Chaussures": "Sandales",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/Vxs10Xx/image-25112.png"
                 }
             }
         },
@@ -94,13 +94,13 @@
                     "Haut": "Pull",
                     "Bas": "Jean",
                     "Chaussures": "Baskets",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/NFVcKHc/image-25213.png"
                 },
                 "Tenue optimale  #2": {
                     "Haut": "Chemise",
                     "Bas": "Pantalon",
                     "Chaussures": "Bottes",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/yP5NrCn/image-25314.png"
                 }
             },
             "pluvieux": {
@@ -108,13 +108,13 @@
                     "Haut": "Impermeable",
                     "Bas": "Pantalon",
                     "Chaussures": "Bottes",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/TW7Y285/image-25415.png"
                 },
                 "Tenue optimale  #2": {
                     "Haut": "Pull",
                     "Bas": "Jean",
                     "Chaussures": "Baskets",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/18qvk4g/image-25516.png"
                 }
             },
             "nuageux": {
@@ -122,29 +122,29 @@
                     "Haut": "Pull",
                     "Bas": "Parachute pants",
                     "Chaussures": "Bottes",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/Y2rnBpN/image-25617.png"
                 },
                 "Tenue optimale  #2": {
-                    "Haut": "Pull",
+                    "Haut": "Polo de golf",
                     "Bas": "Jean",
                     "Chaussures": "Baskets",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/BzCsPrG/image-25718.png"
                 }
             }
         },
         "hiver": {
             "ensoleille": {
                 "Tenue optimale  #1": {
-                    "Haut": "Pull",
+                    "Haut": "Veste d'hiver",
                     "Bas": "Pantalon",
                     "Chaussures": "Bottes",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/P6L4K8B/image-25819.png"
                 },
                 "Tenue optimale  #2": {
                     "Haut": "Manteau",
                     "Bas": "Jean",
                     "Chaussures": "Bottes",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/KwwLpp1/image-25920.png"
                 }
             },
             "pluvieux": {
@@ -152,13 +152,13 @@
                     "Haut": "Impermeable",
                     "Bas": "Pantalon",
                     "Chaussures": "Bottes",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/nzs2f73/image-26021.png"
                 },
                 "Tenue optimale  #2": {
                     "Haut": "Pull",
                     "Bas": "Jean",
                     "Chaussures": "Baskets",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/LgKXLXD/image-26122.png"
                 }
             },
             "nuageux": {
@@ -166,13 +166,13 @@
                     "Haut": "Pull de Noel",
                     "Bas": "Pantalon ample",
                     "Chaussures": "Baskets",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/yPXkc54/image-26223.png"
                 },
                 "Tenue optimale  #2": {
                     "Haut": "Parka reflechissant",
-                    "Bas": "Legging",
+                    "Bas": "Pantalon",
                     "Chaussures": "Chaussures Impermeables",
-                    "imageURL": ""
+                    "imageURL": "https://i.ibb.co/BKJxLnp/image-26324.png"
                 }
             }
         }
