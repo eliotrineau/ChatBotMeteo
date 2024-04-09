@@ -3,43 +3,43 @@
         "printemps": {
             "ensoleille": {
                 "Tenue optimale  #1": {
-                    "haut": "chemise",
-                    "bas": "pantalon",
-                    "chaussures": "baskets",
+                    "Haut": "Chemise",
+                    "Bas": "Pantalon",
+                    "Chaussures": "Baskets",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "t-shirt",
-                    "bas": "short",
-                    "chaussures": "sandales",
+                    "Haut": "T-shirt",
+                    "Bas": "Short",
+                    "Chaussures": "Sandales",
                     "imageURL": ""
                 }
             },
             "pluvieux": {
                 "Tenue optimale  #1": {
-                    "haut": "imperméable",
-                    "bas": "pantalon",
-                    "chaussures": "bottes",
+                    "Haut": "Impermeable",
+                    "Bas": "Pantalon",
+                    "Chaussures": "Bottes",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "pull",
-                    "bas": "jean",
-                    "chaussures": "baskets",
+                    "Haut": "Pull",
+                    "Bas": "Jean",
+                    "Chaussures": "Baskets",
                     "imageURL": ""
                 }
             },
             "nuageux": {
                 "Tenue optimale  #1": {
-                    "haut": "blouson en cuir",
-                    "bas": "pantacourt",
-                    "chaussures": "bottes en cuir",
+                    "Haut": "blouson en cuir",
+                    "Bas": "pantacourt",
+                    "Chaussures": "Bottes en cuir",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "pull",
-                    "bas": "short",
-                    "chaussures": "sandales",
+                    "Haut": "Pull",
+                    "Bas": "Short",
+                    "Chaussures": "Sandales",
                     "imageURL": ""
                 }
             }
@@ -47,43 +47,43 @@
         "ete": {
             "ensoleille": {
                 "Tenue optimale  #1": {
-                    "haut": "t-shirt",
-                    "bas": "short",
-                    "chaussures": "sandales",
+                    "Haut": "T-shirt",
+                    "Bas": "Short",
+                    "Chaussures": "Sandales",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "chemise",
-                    "bas": "bermuda",
-                    "chaussures": "espadrilles",
+                    "Haut": "Chemise",
+                    "Bas": "bermuda",
+                    "Chaussures": "espadrilles",
                     "imageURL": ""
                 }
             },
             "pluvieux": {
                 "Tenue optimale  #1": {
-                    "haut": "t-shirt",
-                    "bas": "pantalon",
-                    "chaussures": "baskets",
+                    "Haut": "T-shirt",
+                    "Bas": "Pantalon",
+                    "Chaussures": "Baskets",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "pull",
-                    "bas": "jean",
-                    "chaussures": "baskets",
+                    "Haut": "Pull",
+                    "Bas": "Jean",
+                    "Chaussures": "Baskets",
                     "imageURL": ""
                 }
             },
             "nuageux": {
                 "Tenue optimale  #1": {
-                    "haut": "t-shirt",
-                    "bas": "pantalon",
-                    "chaussures": "baskets",
+                    "Haut": "T-shirt",
+                    "Bas": "Pantalon",
+                    "Chaussures": "Baskets",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "pull",
-                    "bas": "short",
-                    "chaussures": "sandales",
+                    "Haut": "Pull",
+                    "Bas": "Short",
+                    "Chaussures": "Sandales",
                     "imageURL": ""
                 }
             }
@@ -91,43 +91,43 @@
         "automne": {
             "ensoleille": {
                 "Tenue optimale  #1": {
-                    "haut": "pull",
-                    "bas": "jean",
-                    "chaussures": "baskets",
+                    "Haut": "Pull",
+                    "Bas": "Jean",
+                    "Chaussures": "Baskets",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "chemise",
-                    "bas": "pantalon",
-                    "chaussures": "bottes",
+                    "Haut": "Chemise",
+                    "Bas": "Pantalon",
+                    "Chaussures": "Bottes",
                     "imageURL": ""
                 }
             },
             "pluvieux": {
                 "Tenue optimale  #1": {
-                    "haut": "imperméable",
-                    "bas": "pantalon",
-                    "chaussures": "bottes",
+                    "Haut": "Impermeable",
+                    "Bas": "Pantalon",
+                    "Chaussures": "Bottes",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "pull",
-                    "bas": "jean",
-                    "chaussures": "baskets",
+                    "Haut": "Pull",
+                    "Bas": "Jean",
+                    "Chaussures": "Baskets",
                     "imageURL": ""
                 }
             },
             "nuageux": {
                 "Tenue optimale  #1": {
-                    "haut": "pull",
-                    "bas": "parachute pants",
-                    "chaussures": "bottes",
+                    "Haut": "Pull",
+                    "Bas": "Parachute pants",
+                    "Chaussures": "Bottes",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "pull",
-                    "bas": "jean",
-                    "chaussures": "baskets",
+                    "Haut": "Pull",
+                    "Bas": "Jean",
+                    "Chaussures": "Baskets",
                     "imageURL": ""
                 }
             }
@@ -135,43 +135,43 @@
         "hiver": {
             "ensoleille": {
                 "Tenue optimale  #1": {
-                    "haut": "pull",
-                    "bas": "pantalon",
-                    "chaussures": "bottes",
+                    "Haut": "Pull",
+                    "Bas": "Pantalon",
+                    "Chaussures": "Bottes",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "manteau",
-                    "bas": "jean",
-                    "chaussures": "bottes",
+                    "Haut": "Manteau",
+                    "Bas": "Jean",
+                    "Chaussures": "Bottes",
                     "imageURL": ""
                 }
             },
             "pluvieux": {
                 "Tenue optimale  #1": {
-                    "haut": "imperméable",
-                    "bas": "pantalon",
-                    "chaussures": "bottes",
+                    "Haut": "Impermeable",
+                    "Bas": "Pantalon",
+                    "Chaussures": "Bottes",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "pull",
-                    "bas": "jean",
-                    "chaussures": "baskets",
+                    "Haut": "Pull",
+                    "Bas": "Jean",
+                    "Chaussures": "Baskets",
                     "imageURL": ""
                 }
             },
             "nuageux": {
                 "Tenue optimale  #1": {
-                    "haut": "pull de Noël",
-                    "bas": "pantalon ample",
-                    "chaussures": "baskets",
+                    "Haut": "Pull de Noel",
+                    "Bas": "Pantalon ample",
+                    "Chaussures": "Baskets",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "parka réfléchissant",
-                    "bas": "pantalon moulant",
-                    "chaussures": "chaussures imperméables",
+                    "Haut": "Parka reflechissant",
+                    "Bas": "Legging",
+                    "Chaussures": "Chaussures Impermeables",
                     "imageURL": ""
                 }
             }
@@ -181,43 +181,43 @@
         "printemps": {
             "ensoleille": {
                 "Tenue optimale  #1": {
-                    "haut": "chemisier",
-                    "bas": "jupe",
-                    "chaussures": "sandales",
+                    "Haut": "Chemisier",
+                    "Bas": "Jupe",
+                    "Chaussures": "Sandales",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "t-shirt",
-                    "bas": "short",
-                    "chaussures": "sandales",
+                    "Haut": "T-shirt",
+                    "Bas": "Short",
+                    "Chaussures": "Sandales",
                     "imageURL": ""
                 }
             },
             "pluvieux": {
                 "Tenue optimale  #1": {
-                    "haut": "imperméable",
-                    "bas": "pantalon",
-                    "chaussures": "bottes",
+                    "Haut": "Impermeable",
+                    "Bas": "Pantalon",
+                    "Chaussures": "Bottes",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "pull",
-                    "bas": "jean",
-                    "chaussures": "baskets",
+                    "Haut": "Pull",
+                    "Bas": "Jean",
+                    "Chaussures": "Baskets",
                     "imageURL": ""
                 }
             },
             "nuageux": {
                 "Tenue optimale  #1": {
-                    "haut": "pull",
-                    "bas": "pantalon",
-                    "chaussures": "baskets",
+                    "Haut": "Pull",
+                    "Bas": "Pantalon",
+                    "Chaussures": "Baskets",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "pull",
-                    "bas": "jupe",
-                    "chaussures": "baskets",
+                    "Haut": "Pull",
+                    "Bas": "Jupe",
+                    "Chaussures": "Baskets",
                     "imageURL": ""
                 }
             }
@@ -225,43 +225,43 @@
         "ete": {
             "ensoleille": {
                 "Tenue optimale  #1": {
-                    "haut": "t-shirt",
-                    "bas": "short",
-                    "chaussures": "sandales",
+                    "Haut": "T-shirt",
+                    "Bas": "Short",
+                    "Chaussures": "Sandales",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "robe",
-                    "bas": "sandales",
-                    "chaussures": "sandales",
+                    "Haut": "Robe",
+                    "Bas": "Collants",
+                    "Chaussures": "Sandales",
                     "imageURL": ""
                 }
             },
             "pluvieux": {
                 "Tenue optimale  #1": {
-                    "haut": "t-shirt",
-                    "bas": "pantalon",
-                    "chaussures": "baskets",
+                    "Haut": "T-shirt",
+                    "Bas": "Pantalon",
+                    "Chaussures": "Baskets",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "pull",
-                    "bas": "jean",
-                    "chaussures": "baskets",
+                    "Haut": "Pull",
+                    "Bas": "Jean",
+                    "Chaussures": "Baskets",
                     "imageURL": ""
                 }
             },
             "nuageux": {
                 "Tenue optimale  #1": {
-                    "haut": "t-shirt",
-                    "bas": "pantalon",
-                    "chaussures": "baskets",
+                    "Haut": "T-shirt",
+                    "Bas": "Pantalon",
+                    "Chaussures": "Baskets",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "pull",
-                    "bas": "jupe",
-                    "chaussures": "crocs",
+                    "Haut": "Pull",
+                    "Bas": "Jupe",
+                    "Chaussures": "Crocs",
                     "imageURL": ""
                 }
             }
@@ -269,43 +269,43 @@
         "automne": {
             "ensoleille": {
                 "Tenue optimale  #1": {
-                    "haut": "pull",
-                    "bas": "jupe",
-                    "chaussures": "bottes",
+                    "Haut": "Pull",
+                    "Bas": "Jupe",
+                    "Chaussures": "Bottes",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "chemisier",
-                    "bas": "pantalon",
-                    "chaussures": "bottes",
+                    "Haut": "Chemisier",
+                    "Bas": "Pantalon",
+                    "Chaussures": "Bottes",
                     "imageURL": ""
                 }
             },
             "pluvieux": {
                 "Tenue optimale  #1": {
-                    "haut": "imperméable",
-                    "bas": "pantalon",
-                    "chaussures": "bottes",
+                    "Haut": "Impermeable",
+                    "Bas": "Pantalon",
+                    "Chaussures": "Bottes",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "pull",
-                    "bas": "jean",
-                    "chaussures": "baskets",
+                    "Haut": "Pull",
+                    "Bas": "Jean",
+                    "Chaussures": "Baskets",
                     "imageURL": ""
                 }
             },
             "nuageux": {
                 "Tenue optimale  #1": {
-                    "haut": "pull",
-                    "bas": "pantalon",
-                    "chaussures": "baskets",
+                    "Haut": "Pull",
+                    "Bas": "Pantalon",
+                    "Chaussures": "Baskets",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "pull",
-                    "bas": "jupe",
-                    "chaussures": "bottes",
+                    "Haut": "Pull",
+                    "Bas": "Jupe",
+                    "Chaussures": "Bottes",
                     "imageURL": ""
                 }
             }
@@ -313,43 +313,43 @@
         "hiver": {
             "ensoleille": {
                 "Tenue optimale  #1": {
-                    "haut": "pull",
-                    "bas": "pantalon",
-                    "chaussures": "bottes",
+                    "Haut": "Pull",
+                    "Bas": "Pantalon",
+                    "Chaussures": "Bottes",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "manteau",
-                    "bas": "jupe",
-                    "chaussures": "bottes",
+                    "Haut": "Manteau",
+                    "Bas": "Jupe",
+                    "Chaussures": "Bottes",
                     "imageURL": ""
                 }
             },
             "pluvieux": {
                 "Tenue optimale  #1": {
-                    "haut": "imperméable",
-                    "bas": "pantalon",
-                    "chaussures": "bottes",
+                    "Haut": "Impermeable",
+                    "Bas": "Pantalon",
+                    "Chaussures": "Bottes",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "pull",
-                    "bas": "jean",
-                    "chaussures": "baskets",
+                    "Haut": "Pull",
+                    "Bas": "Jean",
+                    "Chaussures": "Baskets",
                     "imageURL": ""
                 }
             },
             "nuageux": {
                 "Tenue optimale  #1": {
-                    "haut": "pull de Noël",
-                    "bas": "pantalon épais",
-                    "chaussures": "baskets",
+                    "Haut": "Pull de Noel",
+                    "Bas": "Pantalon epais",
+                    "Chaussures": "Baskets",
                     "imageURL": ""
                 },
                 "Tenue optimale  #2": {
-                    "haut": "parka",
-                    "bas": "pantalon ample",
-                    "chaussures": "bottes en fourrure",
+                    "Haut": "Parka",
+                    "Bas": "Pantalon ample",
+                    "Chaussures": "Bottes en fourrure",
                     "imageURL": ""
                 }
             }

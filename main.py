@@ -37,9 +37,9 @@ def questionnaire():
         outfitsData = json_module.load(file)
 
     # Determine the outfit based on the weather
-    if "rain" in weather:
+    if "rain" in weather or "pluie modérée" in weather or "forte pluie" in weather or "légère pluie" in weather:
         weather = "pluvieux"
-    elif "cloud" in weather or "peu nuageux" in weather:
+    elif "cloud" in weather or "peu nuageux" in weather or "couvert" in weather or "partiellement nuageux" in weather:
         weather = "nuageux"
     elif "snow" in weather:
         weather = "neige"

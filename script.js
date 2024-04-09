@@ -38,11 +38,36 @@ function sendMessage() {
     userInput.focus();
 }
 
+var startDelay = 0;
+var messageCount = 0;
+var baseDelay = 500;
+
 function addMessageToChatBox(message) {
-    const chatBox = document.getElementById('chat-box');
-    const messageElement = document.createElement('div');
-    messageElement.textContent = message;
-    chatBox.appendChild(messageElement);
+    // Create a new div for the message
+    var messageDiv = document.createElement('div');
+    messageDiv.classList.add('chat-message', 'bot-message');
+    document.getElementById('chat-box').appendChild(messageDiv);
+  
+    // Create a new Typed instance for the message
+    var options = {
+      strings: [message],
+      typeSpeed: 15,
+      startDelay: startDelay,
+      showCursor: false
+    };
+    var typed = new Typed(messageDiv, options);
+  
+    // Increase the message count
+    messageCount++;
+  
+    // If this is the second message, reset the start delay and the message count
+    if (messageCount === 2) {
+      startDelay = 0;
+      messageCount = 0;
+    } else {
+      // Otherwise, increase the start delay for the next message
+      startDelay += message.length * options.typeSpeed + baseDelay;
+    }
 }
 
 function appendMessage(sender, message) {
@@ -83,7 +108,9 @@ function getWeather() {
                     console.error(data.error);
                 } else {
                     console.log(data.weather);
-                    document.getElementById('weather').innerText = data.weather;                
+                    console.log(city);
+                    document.getElementById('weather').innerText = data.weather;
+                    document.getElementById('location').innerText = city;         
                 }
             })
             .catch(error => console.error('Erreur:', error));
@@ -112,7 +139,7 @@ function sendQuestionnaire(city, sexe, saison) {
         // Select the div and update its content
         const outfitDiv = document.getElementById('outfit');
         let html = '';
-        const order = ['haut', 'bas', 'chaussures'];
+        const order = ['Haut', 'Bas', 'Chaussures'];
         for (let outfit in data) {
             for (let tenue in data[outfit]) {
                 const imageUrl = data[outfit][tenue]['imageURL']; // Store the imageURL in a variable
@@ -159,7 +186,7 @@ function sendQuestionnaire(city, sexe, saison) {
         let randNum = Math.floor(Math.random() * 100);
 
         // If the random number is less than or equal to 15 (15% chance), add the mystery outfit to the html
-        if (randNum <= 100) {
+        if (randNum <= 20) {
             // Select a random mystery outfit
             const randomIndex = Math.floor(Math.random() * mysteryOutfits.length);
             const selectedOutfit = mysteryOutfits[randomIndex];
@@ -230,3 +257,53 @@ function sendQuestionnaire(city, sexe, saison) {
     })
     .catch(error => console.error('Error:', error));
 }
+
+function refreshWindow() {
+    window.location.reload();
+}
+
+var options1 = {
+    strings: ['Bonjour, je suis votre Chatbot Assistant Vestimentaire!'],
+    typeSpeed: 15,
+    showCursor: false
+};
+
+var options2 = {
+    strings: ['Pour quelle ville souhaitez-vous connaître la meilleure tenue vestimentaire au vu de la météo?'],
+    typeSpeed: 15,
+    startDelay: 2500,
+    showCursor: false
+};
+
+var typed1 = new Typed('#message1', options1);
+var typed2 = new Typed('#message2', options2);
+
+var cities = [
+    "Paris", "Marseille", "Lyon", "Toulouse", "Nice", "Nantes", "Strasbourg", 
+    "Montpellier", "Bordeaux", "Lille", "Rennes", "Reims", "Cergy-Pontoise", 
+    "Saint-Étienne", "Toulon", "Angers", "Grenoble", "Dijon", "Nîmes", "Aix-en-Provence", 
+    "Saint-Quentin-en-Yvelines", "Brest", "Le Mans", "Amiens", "Tours", "Limoges", 
+    "Clermont-Ferrand", "Villeurbanne", "La Rochelle", "Caen", "Calais", "La Seyne-sur-Mer", 
+    "Saint-Paul", "Rouen", "Cannes", "Pau", "Nanterre", "Versailles", "Courbevoie", 
+    "Vitry-sur-Seine", "Colombes", "Aulnay-sous-Bois", "Rueil-Malmaison", "La Rochelle", 
+    "Antibes", "Saint-Pierre", "Champigny-sur-Marne", "Aubervilliers", "Saint-Nazaire", 
+    "Neuilly-sur-Seine", "Le Havre", "Cergy", "Béziers", "Troyes", "La Roche-sur-Yon", 
+    "Lorient", "Montreuil", "Charleville-Mézières", "Saint-Malo", "Valence", "Issy-les-Moulineaux", 
+    "Noisy-le-Grand", "Vénissieux", "Clichy", "Tours", "Bourges", "Saint-Denis", "La Courneuve", 
+    "Argenteuil", "Roubaix", "Dunkerque", "Avignon", "Créteil", "Poitiers", "Fort-de-France", 
+    "La Réunion", "Saint-Denis", "La Possession", "Sainte-Marie", "Le Tampon", "Saint-André", 
+    "Saint-Louis", "Saint-Joseph", "Saint-Pierre", "Saint-Benoît", "Saint-Paul", "Saint-Leu", 
+    "Sainte-Suzanne", "Petite-Île", "Entre-Deux", "Les Avirons", "Trois-Bassins", "Cilaos", 
+    "Salazie", "Saint-Philippe", "Bras-Panon", "Sainte-Rose", "Le Port", "Saint-Joseph", 
+    "Sainte-Marie", "Saint-Louis", "Saint-Paul", "Saint-Pierre", "Saint-Leu", "Saint-André", 
+    "Saint-Benoît", "Saint-Denis", "Sainte-Suzanne", "Saint-Philippe", "Sainte-Rose", 
+    "Petite-Île", "Plaine-des-Palmistes", "Port", "Possession", "Tampon", "Trois-Bassins"
+];
+
+$(function() {
+    $("#user-input").autocomplete({
+        source: cities,
+        autoFocus: true
+    });
+});
+
