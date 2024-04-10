@@ -8,7 +8,11 @@ This chatbot helps users choose their outfits based on real-time weather conditi
 - Provides outfit recommendations based on the current weather conditions.
 - Allows users to customize their preferences for outfit suggestions.
 - Supports multiple locations for weather information.
-- ||message||
+<details>
+  <summary>;)</summary>
+  
+  25/20 s'il-vous-plaît monsieur 🤝
+</details>
 
 ## Usage
 1. Open the chatbot application.
