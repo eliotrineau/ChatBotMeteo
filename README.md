@@ -8,6 +8,8 @@ This chatbot helps users choose their outfits based on real-time weather conditi
 - Provides outfit recommendations based on the current weather conditions.
 - Allows users to customize their preferences for outfit suggestions.
 - Supports multiple locations for weather information.
+- Supports up to +1 day accurate weather prediction
+- Autocomplete famous French cities
 - <details>
     <summary>;)</summary>
   
@@ -22,10 +24,10 @@ This chatbot helps users choose their outfits based on real-time weather conditi
 5. Enjoy your weather-appropriate outfit!
 
 ## Technologies Used
-- (Node.js)
-- (Express.js)
 - Weather API (OpenWeather One Call 3.0)
 - HTML/CSS for the chatbot interface
+- Python with Flask server for the main script
+- JavaScript for the animations and requests
 
 ## Contributors
 - Anton ADAM ([@aent0n](https://github.com/aent0n))
