@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interface du Chatbot</title>
+  <title>TooBot Météo</title>
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="chatbot.css" type="text/css">
@@ -21,8 +21,11 @@
         <div class="chat-message bot-message" id="message1"></div>
         <div class="chat-message bot-message" id="message2"></div> 
       </div>
-      <div>
+      <div class="flex">
         <input type="text" id="user-input" placeholder="Votre message..." class="border p-2 rounded w-full mb-2">
+        <button type="form" class="microphone-button ml-4" id="microphone-button" title="Cliquer ici pour la recherche vocale">
+          <div class="microphone-icon"></div>
+        </button>
       </div>
       <div id="suggestion" class="suggestion"></div>
       <div class="flex space-x-4">
@@ -30,7 +33,11 @@
         <button onclick="refreshWindow()" class="bg-green-700 text-white p-2 rounded">Faire une autre requête</button>
       </div>
     </div>
-    <div class="flex"></div>
+    <div class="">
+      <div>
+        <img src="https://i.ibb.co/NsJxrvK/image-271mascott-removebg-preview.png" class="ml-20" style="width: 200%; height: auto;">
+      </div>
+    </div>
   </div>
   <div>
     <div class="mt-4 mb-4">Résultat de la requête:</div>

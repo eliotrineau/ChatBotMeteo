@@ -5,6 +5,49 @@ body {
   background-size: cover;
 }
 
+.microphone-button {
+  border: 2px solid #cccccc; /* Add a gray border */
+  border-radius: 50%; /* Make the border perfectly round */
+  padding: 10px;
+  background-color: white;
+  cursor: pointer;
+  outline: none; /* Remove the default focus outline */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add a transition */
+  display: flex; /* Center the microphone icon */
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height */
+}
+
+.microphone-button:active {
+  transform: scale(0.95); /* Make the button slightly smaller when it's clicked */
+}
+
+.microphone-button.active {
+  background-color: #ccffcc; /* Add a new class for the active state */
+}
+
+.microphone-icon {
+  width: 10px;
+  height: 20px;
+  background-color: #6c6c6c;
+  border-radius: 5px;
+  position: relative;
+}
+
+.microphone-icon::before {
+  content: "";
+  width: 14px;
+  height: 6px;
+  border: 3px solid #6c6c6c;
+  border-top: none;
+  border-radius: 7px;
+  position: absolute;
+  top: 20px;
+  left: -2px;
+}
+
 #myModal img {
   width: 35%; 
   height: auto; 
