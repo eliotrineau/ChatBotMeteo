@@ -1,6 +1,8 @@
-# ChatBotMeteo
+# TooBot Meteo
 ## Description
 This chatbot helps users choose their outfits based on real-time weather conditions.
+![image_271mascott-removebg-preview](https://github.com/eliotrineau/ChatBotMeteo/assets/116871473/ddf06adf-b76d-4633-a922-1b5b0bfc8175)
+
 
 ## Features
 - Retrieves real-time weather data from a weather API.
