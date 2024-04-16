@@ -31,34 +31,11 @@ This chatbot helps users choose their outfits based on real-time weather conditi
 - Python with Flask server for the main script
 - JavaScript for the animations and requests
 
-### Requirements
+## Requirements
 
-## Install Flask
+### Install All dependencies
 ```
-pip install flask flask_cors
-```
-## Install Requests
-```
-pip install requests
-```
-## Install Json 
-```
-pip install json
-```
-## Install Werkzeug
-```
-pip install werkzeug
-```
-## Install OS
-```
-pip install os
-```
-## Install Speech Recognition
-```
-pip install speech_recognition
-```
-## Install Pydub
-pip install pydub
+pip install flask flask_cors requests json werkzeug os speech_recognition pydub
 ```
 
 
