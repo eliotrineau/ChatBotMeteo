@@ -4,30 +4,26 @@ body {
   background-position: center center;
   background-size: cover;
 }
-
 .microphone-button {
-  border: 2px solid #cccccc; /* Add a gray border */
-  border-radius: 50%; /* Make the border perfectly round */
+  border: 2px solid #cccccc; 
+  border-radius: 50%;
   padding: 10px;
   background-color: white;
   cursor: pointer;
-  outline: none; /* Remove the default focus outline */
+  outline: none; 
   transition: background-color 0.3s ease, transform 0.3s ease; /* Add a transition */
-  display: flex; /* Center the microphone icon */
+  display: flex; 
   justify-content: center;
   align-items: center;
-  width: 50px; /* Set a fixed width */
-  height: 50px; /* Set a fixed height */
+  width: 50px; 
+  height: 50px; 
 }
-
 .microphone-button:active {
-  transform: scale(0.95); /* Make the button slightly smaller when it's clicked */
+  transform: scale(0.95); 
 }
-
 .microphone-button.active {
-  background-color: #ccffcc; /* Add a new class for the active state */
+  background-color: #ccffcc; 
 }
-
 .microphone-icon {
   width: 10px;
   height: 20px;
@@ -35,7 +31,6 @@ body {
   border-radius: 5px;
   position: relative;
 }
-
 .microphone-icon::before {
   content: "";
   width: 14px;
@@ -47,41 +42,33 @@ body {
   top: 20px;
   left: -2px;
 }
-
 #myModal img {
   width: 35%; 
   height: auto; 
 }
-
 .input-container {
   position: relative;
 }
-
 #cityInput, #citySuggestion {
   position: absolute;
   width: 100%;
   box-sizing: border-box;
 }
-
 #cityInput {
   background: transparent;
   color: black;
 }
-
 #citySuggestion {
   color: lightgray;
 }
-
 .chat-box {
-  width: 720px; /* Adjust as needed */
-  height: 300px; /* Adjust as needed */
+  width: 720px; 
+  height: 300px;
 }
-
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-
 .reveal-button {
   display: block;
   width: 100%;
@@ -92,56 +79,47 @@ body {
   cursor: pointer;
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) infinite;
 }
-
 .mystery-outfit {
   opacity: 0;
   display: none;
 }
-
 .mystery-outfit.visible {
   display: block;
   animation: fadeIn 1s ease-out forwards;
 }
-
 @keyframes shake {
   10%, 90% {
       transform: translate3d(-1px, 0, 0);
   }
-  
   20%, 80% {
       transform: translate3d(2px, 0, 0);
   }
-
   30%, 50%, 70% {
       transform: translate3d(-4px, 0, 0);
   }
-
   40%, 60% {
       transform: translate3d(4px, 0, 0);
   }
 }
-
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  padding-top: 100px; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9); 
 }
-
 .modal-content {
   margin: auto;
   display: block;
   width: 80%;
   max-width: 700px;
 }
-
 .close {
   position: absolute;
   top: 15px;
@@ -151,7 +129,6 @@ body {
   font-weight: bold;
   transition: 0.3s;
 }
-
 .close:hover,
 .close:focus {
   color: #bbb;
