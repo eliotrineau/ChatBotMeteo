@@ -151,7 +151,7 @@ var cities = [
 ];
 
 let state = 'askingDay';
-let city, sexe, saison;
+let day, city, sexe, saison;
 
 document.getElementById('user-input').addEventListener('keyup', function(event) {
     // Number 13 is the "Enter" key on the keyboard
@@ -231,6 +231,8 @@ async function sendMessage() {
             }
             await addMessageToChatBox(`Vous avez choisi : ${saison}`);
             state = 'done';
+
+            console.log(typeof day, city, sexe, saison);
 
             sendQuestionnaire(day, city, sexe, saison);
         } else {
@@ -337,7 +339,7 @@ function sendQuestionnaire(day, city, sexe, saison) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            jourInput: day,
+            jourInput: parseInt(day),
             cityInput: city,
             sexeInput: sexe,
             saisonInput: saison
@@ -345,7 +347,7 @@ function sendQuestionnaire(day, city, sexe, saison) {
     })
     .then(response => response.json())
     .then(data => {
-        console.log(data);
+        console.log('Response data:', data);
         // Select the div and update its content
         const outfitDiv = document.getElementById('outfit');
         let html = '';

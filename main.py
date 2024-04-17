@@ -21,12 +21,13 @@ apiKey = "b09e3c93acf17d44ab9a805b88b2a074"
 @app.route('/questionnaire', methods=['POST'])
 def questionnaire():
     data = request.get_json()
+    print("Data received:", data)
     jour = int(data.get('jourInput'))    
     city = data.get('cityInput')
     sexe = data.get('sexeInput')
     saison = data.get('saisonInput')
-    if not jour or not isinstance(jour, int):
-        return jsonify({"error": "Invalid day."}, jour, {"type": isinstance(jour, int)}), 400
+    #if not jour or not isinstance(jour, int):
+        #return jsonify({"error": "Invalid day."}, jour, {"type": isinstance(jour, int)}), 400
     if not city or not isinstance(city, str):
         return jsonify({"error": "Invalid city name."}), 400
 
