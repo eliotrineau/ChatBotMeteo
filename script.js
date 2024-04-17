@@ -490,17 +490,16 @@ var options2 = {
 var typed1 = new Typed('#message1', options1);
 var typed2 = new Typed('#message2', options2);
 
-$(function() {
-    $("#user-input").autocomplete({
-        source: function(request, response) {
-            if (state === 'askingCity') {
-                response(cities);
-            } else {
-                response([]);
-            }
-        },
-        autoFocus: true
-    });
+$("#user-input").autocomplete({
+    source: function(request, response) {
+        if (state === 'askingCity') {
+            var filteredCities = $.ui.autocomplete.filter(cities, request.term);
+            response(filteredCities);
+        } else {
+            response([]);
+        }
+    },
+    autoFocus: true
 });
 // Get the microphone button element
 var microphoneButton = document.getElementById('microphone-button');
