@@ -35,7 +35,7 @@ This chatbot helps users choose their outfits based on real-time weather conditi
 
 ### Install All dependencies
 ```
-pip install flask flask_cors requests json werkzeug os SpeechRecognition pydub
+pip install flask flask_cors requests json werkzeug SpeechRecognition pydub
 ```
 
 
